@@ -7,28 +7,28 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-charcoal-800 to-charcoal-900 text-ivory-100">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-charcoal-800 to-charcoal-900 text-ivory-100 overflow-hidden">
         <div className="absolute inset-0 bg-black/40 z-0"></div>
-        <div className="container mx-auto px-4 z-10 text-center">
-          <h1 className="display-xl mb-6 text-ivory-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 text-center max-w-7xl py-20 sm:py-24 md:py-32">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-tight tracking-tight mb-6 sm:mb-8 text-ivory-100 max-w-5xl mx-auto balance-text">
             The Last Roof Your Home Will Ever Need
           </h1>
-          <p className="headline-md mb-8 text-ivory-200 max-w-3xl mx-auto font-normal">
+          <p className="text-lg sm:text-xl md:text-2xl font-light font-sans leading-relaxed mb-8 sm:mb-12 text-ivory-200/90 max-w-3xl mx-auto px-4">
             Premium roofing craftsmanship for discerning homeowners who value peace of mind and generational quality
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="primary" size="lg" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
+            <Button variant="primary" size="lg" className="w-full sm:w-auto min-w-[250px] sm:min-w-[200px] min-h-[44px]" asChild>
               <Link href="/contact">Schedule Consultation</Link>
             </Button>
-            <Button variant="secondary" size="lg" asChild>
+            <Button variant="secondary" size="lg" className="w-full sm:w-auto min-w-[250px] sm:min-w-[200px] min-h-[44px]" asChild>
               <Link href="/portfolio">View Portfolio</Link>
             </Button>
           </div>
-          <div className="mt-16">
+          <div className="mt-12 sm:mt-16 hidden md:block">
             <div className="inline-block animate-bounce">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-ivory-200"
+                className="h-8 w-8 text-ivory-200/50"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -46,11 +46,11 @@ export default function HomePage() {
       </section>
 
       {/* Problem-Solution Statement */}
-      <section className="py-20 bg-ivory-100">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <section className="py-16 sm:py-20 md:py-24 bg-ivory-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
             <div className="space-y-4">
-              <h2 className="headline-xl text-charcoal-800">The Typical Roofing Experience</h2>
+              <h2 className="text-3xl sm:text-4xl font-serif font-light leading-tight text-charcoal-800">The Typical Roofing Experience</h2>
               <ul className="space-y-3 text-charcoal-600">
                 <li className="flex items-start">
                   <span className="text-red-500 mr-2">✗</span>
@@ -71,7 +71,7 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="space-y-4">
-              <h2 className="headline-xl text-forest-600">The AR Global Difference</h2>
+              <h2 className="text-3xl sm:text-4xl font-serif font-light leading-tight text-forest-600">The AR Global Difference</h2>
               <ul className="space-y-3 text-charcoal-700">
                 <li className="flex items-start">
                   <CheckCircle className="text-forest-500 mr-2 h-5 w-5 mt-0.5" />
@@ -96,15 +96,15 @@ export default function HomePage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-ivory-50">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20 md:py-24 bg-ivory-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="display-md text-charcoal-800 mb-4">Our Services</h2>
-            <p className="text-body-lg text-charcoal-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light leading-tight text-charcoal-800 mb-4">Our Services</h2>
+            <p className="text-lg md:text-xl text-charcoal-600 max-w-2xl mx-auto leading-relaxed px-4">
               From residential to commercial, we provide comprehensive roofing solutions tailored to your needs
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               {
                 title: "Asphalt Shingles",
@@ -145,27 +145,27 @@ export default function HomePage() {
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-20 bg-charcoal-800 text-ivory-100">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20 md:py-24 bg-charcoal-800 text-ivory-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           {/* Stats Bar */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto text-center">
             <div>
-              <div className="headline-xl text-bronze-400 mb-2">20+</div>
-              <div className="text-ivory-200">Years in Business</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-bronze-400 mb-2">20+</div>
+              <div className="text-base sm:text-lg text-ivory-200">Years in Business</div>
             </div>
             <div>
-              <div className="headline-xl text-bronze-400 mb-2">5,000+</div>
-              <div className="text-ivory-200">Projects Completed</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-bronze-400 mb-2">5,000+</div>
+              <div className="text-base sm:text-lg text-ivory-200">Projects Completed</div>
             </div>
             <div>
-              <div className="headline-xl text-bronze-400 mb-2">98%</div>
-              <div className="text-ivory-200">Client Satisfaction</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-bronze-400 mb-2">98%</div>
+              <div className="text-base sm:text-lg text-ivory-200">Client Satisfaction</div>
             </div>
           </div>
 
           {/* Featured Reviews */}
           <div className="text-center mb-12">
-            <h2 className="display-md text-ivory-100 mb-4">What Our Clients Say</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light leading-tight text-ivory-100 mb-4">What Our Clients Say</h2>
             <div className="flex justify-center mb-4">
               {[1, 2, 3, 4, 5].map((star) => (
                 <Star key={star} className="h-6 w-6 text-bronze-400 fill-bronze-400" />
@@ -218,14 +218,14 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-forest-600 text-ivory-100">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="display-md mb-6">Ready to Protect Your Investment?</h2>
-          <p className="headline-md mb-8 max-w-2xl mx-auto font-normal">
+      <section className="py-16 sm:py-20 md:py-24 bg-forest-600 text-ivory-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light leading-tight mb-6">Ready to Protect Your Investment?</h2>
+          <p className="text-lg sm:text-xl md:text-2xl font-light font-sans leading-relaxed mb-8 max-w-2xl mx-auto px-4">
             Schedule a complimentary consultation and discover why discerning homeowners choose AR Global
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-ivory-100 text-forest-700 hover:bg-ivory-200" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
+            <Button size="lg" className="bg-ivory-100 text-forest-700 hover:bg-ivory-200 w-full sm:w-auto min-w-[250px] sm:min-w-[200px] min-h-[44px]" asChild>
               <Link href="/contact">Schedule Consultation</Link>
             </Button>
             <a

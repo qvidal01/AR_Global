@@ -80,14 +80,14 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-charcoal-800 to-charcoal-900 text-ivory-100">
-        <div className="container mx-auto px-4">
+      <section className="relative py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-charcoal-800 to-charcoal-900 text-ivory-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="display-lg mb-6">Premium Roofing Services</h1>
-            <p className="headline-md font-normal text-ivory-200 mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light leading-tight tracking-tight mb-6 sm:mb-8">Premium Roofing Services</h1>
+            <p className="text-lg sm:text-xl md:text-2xl font-light font-sans leading-relaxed text-ivory-200/90 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
               From residential to commercial, we provide comprehensive roofing solutions backed by 20+ years of excellence
             </p>
-            <Button variant="primary" size="lg" asChild>
+            <Button variant="primary" size="lg" className="min-w-[250px] sm:min-w-[280px] min-h-[44px]" asChild>
               <Link href="/contact">Schedule Free Consultation</Link>
             </Button>
           </div>
@@ -95,16 +95,16 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-ivory-100">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <section className="py-16 sm:py-20 md:py-24 bg-ivory-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all hover:-translate-y-1">
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-charcoal-200 hover:border-forest-500 group">
                 <CardHeader>
-                  <div className="mb-4 h-14 w-14 rounded-full bg-forest-100 flex items-center justify-center">
-                    <service.icon className="h-7 w-7 text-forest-600" />
+                  <div className="mb-6 h-16 w-16 rounded-full bg-forest-100 flex items-center justify-center group-hover:bg-forest-500 transition-colors duration-300">
+                    <service.icon className="h-8 w-8 text-forest-600 group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <CardTitle className="headline-md">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl font-serif font-normal leading-tight mb-2">{service.title}</CardTitle>
                   <CardDescription className="text-sm text-charcoal-600">
                     Investment: <span className="font-semibold text-forest-600">{service.investmentRange}</span>
                   </CardDescription>
@@ -134,10 +134,10 @@ export default function ServicesPage() {
       </section>
 
       {/* Why Choose AR Global */}
-      <section className="py-20 bg-ivory-50">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20 md:py-24 bg-ivory-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-4xl mx-auto">
-            <h2 className="display-md text-center text-charcoal-800 mb-12">Why Choose AR Global?</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light leading-tight text-center text-charcoal-800 mb-12">Why Choose AR Global?</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
@@ -164,8 +164,8 @@ export default function ServicesPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="headline-md text-charcoal-800 mb-2">{item.title}</h3>
-                    <p className="text-charcoal-600">{item.description}</p>
+                    <h3 className="text-xl sm:text-2xl font-serif font-normal leading-tight text-charcoal-800 mb-2">{item.title}</h3>
+                    <p className="text-base text-charcoal-600 leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -175,13 +175,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Overview */}
-      <section className="py-20 bg-charcoal-800 text-ivory-100">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="display-md mb-6">Our White-Glove Process</h2>
-          <p className="text-body-lg text-ivory-200 mb-12 max-w-2xl mx-auto">
+      <section className="py-16 sm:py-20 md:py-24 bg-charcoal-800 text-ivory-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light leading-tight mb-6">Our White-Glove Process</h2>
+          <p className="text-lg md:text-xl text-ivory-200 leading-relaxed mb-12 max-w-2xl mx-auto px-4">
             Every project follows our proven 7-phase process designed to deliver exceptional results with zero stress
           </p>
-          <div className="grid sm:grid-cols-3 lg:grid-cols-7 gap-4 max-w-6xl mx-auto mb-12">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 max-w-6xl mx-auto mb-12">
             {[
               "Discovery",
               "Proposal",
@@ -204,17 +204,17 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-forest-600 text-ivory-100">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="display-md mb-6">Ready to Get Started?</h2>
-          <p className="headline-md mb-8 max-w-2xl mx-auto font-normal">
+      <section className="py-16 sm:py-20 md:py-24 bg-forest-600 text-ivory-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light leading-tight mb-6">Ready to Get Started?</h2>
+          <p className="text-lg sm:text-xl md:text-2xl font-light font-sans leading-relaxed mb-8 max-w-2xl mx-auto px-4">
             Schedule your complimentary consultation and receive a detailed proposal within 3 days
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-ivory-100 text-forest-700 hover:bg-ivory-200" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
+            <Button size="lg" className="bg-ivory-100 text-forest-700 hover:bg-ivory-200 w-full sm:w-auto min-w-[250px] sm:min-w-[200px] min-h-[44px]" asChild>
               <Link href="/contact">Schedule Consultation</Link>
             </Button>
-            <Button variant="secondary" size="lg" asChild>
+            <Button variant="secondary" size="lg" className="w-full sm:w-auto min-w-[250px] sm:min-w-[200px] min-h-[44px] border-2 border-ivory-100 text-ivory-100 hover:bg-ivory-100 hover:text-forest-600" asChild>
               <Link href="/investment-guide">View Investment Guide</Link>
             </Button>
           </div>

@@ -92,25 +92,26 @@ export default function PortfolioPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-charcoal-800 to-charcoal-900 text-ivory-100">
-        <div className="container mx-auto px-4">
+      <section className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-br from-charcoal-800 to-charcoal-900 text-ivory-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="display-lg mb-6">Our Portfolio</h1>
-            <p className="headline-md font-normal text-ivory-200 mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light leading-tight tracking-tight mb-6 sm:mb-8">Our Portfolio</h1>
+            <p className="text-lg sm:text-xl md:text-2xl font-light font-sans leading-relaxed text-ivory-200/90 mb-12 sm:mb-16 max-w-3xl mx-auto px-4">
               Explore our recent projects showcasing premium craftsmanship and attention to detail
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            {/* Stats Grid - properly centered */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-bronze-400">5,000+</div>
-                <div className="text-sm text-ivory-200">Projects Completed</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-bronze-400 mb-2">5,000+</div>
+                <div className="text-sm sm:text-base uppercase tracking-wider text-ivory-200">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-bronze-400">98%</div>
-                <div className="text-sm text-ivory-200">Client Satisfaction</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-bronze-400 mb-2">98%</div>
+                <div className="text-sm sm:text-base uppercase tracking-wider text-ivory-200">Client Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-bronze-400">20+</div>
-                <div className="text-sm text-ivory-200">Years Experience</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-bronze-400 mb-2">20+</div>
+                <div className="text-sm sm:text-base uppercase tracking-wider text-ivory-200">Years Experience</div>
               </div>
             </div>
           </div>
@@ -118,17 +119,17 @@ export default function PortfolioPage() {
       </section>
 
       {/* Filter Bar */}
-      <section className="py-8 bg-ivory-100 border-b border-charcoal-200 sticky top-20 z-40">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-2">
+      <section className="py-6 sm:py-8 bg-ivory-100 border-b border-charcoal-200 sticky top-20 z-40">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             {filters.map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap min-h-[44px] ${
                   activeFilter === filter
-                    ? "bg-forest-600 text-ivory-100"
-                    : "bg-ivory-50 text-charcoal-700 hover:bg-forest-100"
+                    ? "bg-forest-600 text-ivory-100 border-2 border-forest-600"
+                    : "bg-ivory-50 text-charcoal-700 hover:bg-forest-100 hover:border-forest-500 border-2 border-charcoal-300"
                 }`}
               >
                 {filter}
@@ -139,9 +140,9 @@ export default function PortfolioPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 bg-ivory-50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <section className="py-16 sm:py-20 md:py-24 bg-ivory-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {filteredProjects.map((project) => (
               <Card key={project.id} className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
                 <div className="aspect-video bg-charcoal-200 relative overflow-hidden">
@@ -208,17 +209,17 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-forest-600 text-ivory-100">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="display-md mb-6">Ready to Start Your Project?</h2>
-          <p className="headline-md mb-8 max-w-2xl mx-auto font-normal">
+      <section className="py-16 sm:py-20 md:py-24 bg-forest-600 text-ivory-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light leading-tight mb-6">Ready to Start Your Project?</h2>
+          <p className="text-lg sm:text-xl md:text-2xl font-light font-sans leading-relaxed mb-8 max-w-2xl mx-auto px-4">
             Join our portfolio of satisfied homeowners with a premium roofing installation
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-ivory-100 text-forest-700 hover:bg-ivory-200" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
+            <Button size="lg" className="bg-ivory-100 text-forest-700 hover:bg-ivory-200 w-full sm:w-auto min-w-[250px] sm:min-w-[200px] min-h-[44px]" asChild>
               <Link href="/contact">Schedule Consultation</Link>
             </Button>
-            <Button variant="secondary" size="lg" asChild>
+            <Button variant="secondary" size="lg" className="w-full sm:w-auto min-w-[250px] sm:min-w-[200px] min-h-[44px] border-2 border-ivory-100 text-ivory-100 hover:bg-ivory-100 hover:text-forest-600" asChild>
               <Link href="/investment-guide">View Investment Guide</Link>
             </Button>
           </div>
