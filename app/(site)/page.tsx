@@ -17,7 +17,7 @@ export default function HomePage() {
         ></div>
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div className="container mx-auto px-4 md:px-6 lg:px-8 z-20 text-center relative">
-          <h1 className="text-headline-lg mb-6 text-ivory px-4">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-ivory px-4">
             The Last Roof Your Home Will Ever Need
           </h1>
           <p className="headline-md mb-8 text-ivory max-w-3xl mx-auto font-normal px-4">
