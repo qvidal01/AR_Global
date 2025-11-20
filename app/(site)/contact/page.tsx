@@ -19,9 +19,7 @@ const contactFormSchema = z.object({
   phone: z.string().min(10, "Please enter a valid phone number"),
   propertyAddress: z.string().optional(),
   serviceInterest: z.string().min(1, "Please select a service"),
-  preferredContact: z.enum(["phone", "email"], {
-    required_error: "Please select a contact method",
-  }),
+  preferredContact: z.enum(["phone", "email"]),
   bestTime: z.string().optional(),
   message: z.string().min(10, "Please provide more details (at least 10 characters)"),
   heardFrom: z.string().optional(),

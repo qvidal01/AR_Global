@@ -24,14 +24,14 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-charcoal-200 bg-ivory-100/95 backdrop-blur supports-[backdrop-filter]:bg-ivory-100/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2" aria-label="AR Global Roofing - Home">
           <span className="headline-md font-bold text-charcoal-800">
             AR Global Roofing
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-6">
+        <nav className="hidden lg:flex items-center space-x-6" aria-label="Main navigation">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -49,8 +49,9 @@ export function Header() {
             href="tel:+12145551234"
             className="flex items-center space-x-2 text-sm font-medium text-charcoal-700 hover:text-forest-500 transition-colors"
             onClick={() => trackPhoneClick("header_desktop")}
+            aria-label="Call (214) 555-1234"
           >
-            <Phone className="h-4 w-4" />
+            <Phone className="h-4 w-4" aria-hidden="true" />
             <span>(214) 555-1234</span>
           </a>
           <Button variant="primary" asChild>
@@ -68,6 +69,8 @@ export function Header() {
           className="lg:hidden p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-navigation"
         >
           {isMenuOpen ? (
             <X className="h-6 w-6 text-charcoal-800" />
@@ -79,12 +82,13 @@ export function Header() {
 
       {/* Mobile Navigation */}
       <div
+        id="mobile-navigation"
         className={cn(
           "lg:hidden border-t border-charcoal-200 bg-ivory-100",
           isMenuOpen ? "block" : "hidden"
         )}
       >
-        <nav className="container mx-auto px-4 py-4 space-y-2">
+        <nav className="container mx-auto px-4 py-4 space-y-2" aria-label="Mobile navigation">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -99,8 +103,10 @@ export function Header() {
             <a
               href="tel:+12145551234"
               className="flex items-center space-x-2 py-2 text-base font-medium text-charcoal-700 hover:text-forest-500 transition-colors"
+              onClick={() => trackPhoneClick("header_mobile")}
+              aria-label="Call (214) 555-1234"
             >
-              <Phone className="h-5 w-5" />
+              <Phone className="h-5 w-5" aria-hidden="true" />
               <span>(214) 555-1234</span>
             </a>
             <Button variant="primary" className="w-full" asChild>
