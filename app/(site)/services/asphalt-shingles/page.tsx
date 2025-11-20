@@ -13,14 +13,14 @@ export default function AsphaltShinglesPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-charcoal-800 to-charcoal-900 text-ivory-100">
+      <section className="relative py-20 bg-gradient-to-br from-charcoal to-charcoal text-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-block px-4 py-2 bg-forest-600 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-primary-green rounded-full text-sm font-semibold mb-4">
               Most Popular Choice
             </div>
-            <h1 className="display-lg mb-6">Asphalt Shingle Roofing</h1>
-            <p className="headline-md font-normal text-ivory-200 mb-8">
+            <h1 className="text-headline-lg mb-6">Asphalt Shingle Roofing</h1>
+            <p className="headline-md font-normal text-ivory mb-8">
               Premium architectural shingles combining durability, aesthetics, and value with industry-leading warranties
             </p>
             <Button variant="primary" size="lg" asChild>
@@ -31,15 +31,15 @@ export default function AsphaltShinglesPage() {
       </section>
 
       {/* Overview */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-6">Overview</h2>
+            <h2 className="text-headline-sm text-charcoal mb-6">Overview</h2>
             <div className="prose prose-lg max-w-none">
-              <p className="text-body-lg text-charcoal-700 leading-relaxed mb-4">
+              <p className="text-body-lg text-charcoal leading-relaxed mb-4">
                 Architectural asphalt shingles represent the gold standard for North Texas homes, offering an ideal balance of performance, aesthetics, and investment value. Unlike basic 3-tab shingles, architectural shingles feature multiple layers that create dimensional depth and enhanced durability.
               </p>
-              <p className="text-body-lg text-charcoal-700 leading-relaxed">
+              <p className="text-body-lg text-charcoal leading-relaxed">
                 At AR Global, we exclusively install premium architectural shingles from Owens Corning, CertainTeed, and Atlas—brands trusted by discerning homeowners for their superior wind resistance, longevity, and comprehensive warranties.
               </p>
             </div>
@@ -47,11 +47,11 @@ export default function AsphaltShinglesPage() {
             <div className="grid md:grid-cols-3 gap-6 mt-12">
               <Card>
                 <CardHeader>
-                  <Shield className="h-10 w-10 text-forest-500 mb-2" />
+                  <Shield className="h-10 w-10 text-primary-green mb-2" />
                   <CardTitle>130+ MPH Wind Resistance</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-charcoal-600">
+                  <p className="text-sm text-charcoal">
                     Engineered to withstand severe Texas storms and high winds
                   </p>
                 </CardContent>
@@ -59,11 +59,11 @@ export default function AsphaltShinglesPage() {
 
               <Card>
                 <CardHeader>
-                  <Clock className="h-10 w-10 text-forest-500 mb-2" />
+                  <Clock className="h-10 w-10 text-primary-green mb-2" />
                   <CardTitle>30-50 Year Warranty</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-charcoal-600">
+                  <p className="text-sm text-charcoal">
                     Industry-leading manufacturer warranties plus our 10-year workmanship guarantee
                   </p>
                 </CardContent>
@@ -71,11 +71,11 @@ export default function AsphaltShinglesPage() {
 
               <Card>
                 <CardHeader>
-                  <Award className="h-10 w-10 text-forest-500 mb-2" />
+                  <Award className="h-10 w-10 text-primary-green mb-2" />
                   <CardTitle>Energy Star Options</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-charcoal-600">
+                  <p className="text-sm text-charcoal">
                     Cool roof technology reduces heat absorption and lowers cooling costs
                   </p>
                 </CardContent>
@@ -86,10 +86,10 @@ export default function AsphaltShinglesPage() {
       </section>
 
       {/* Key Benefits */}
-      <section className="py-20 bg-ivory-50">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8">Key Benefits</h2>
+            <h2 className="text-headline-sm text-charcoal mb-8">Key Benefits</h2>
             <div className="space-y-6">
               {[
                 {
@@ -118,10 +118,10 @@ export default function AsphaltShinglesPage() {
                 },
               ].map((benefit, index) => (
                 <div key={index} className="flex gap-4 items-start">
-                  <CheckCircle className="h-6 w-6 text-forest-500 flex-shrink-0 mt-1" />
+                  <CheckCircle className="h-6 w-6 text-primary-green flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="headline-md text-charcoal-800 mb-2">{benefit.title}</h3>
-                    <p className="text-charcoal-600">{benefit.description}</p>
+                    <h3 className="headline-md text-charcoal mb-2">{benefit.title}</h3>
+                    <p className="text-charcoal">{benefit.description}</p>
                   </div>
                 </div>
               ))}
@@ -131,17 +131,17 @@ export default function AsphaltShinglesPage() {
       </section>
 
       {/* Investment Range */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8">Investment Range</h2>
-            <div className="bg-ivory-50 border-2 border-forest-200 rounded-lg p-8">
+            <h2 className="text-headline-sm text-charcoal mb-8">Investment Range</h2>
+            <div className="bg-ivory border-2 border-primary-green rounded-lg p-8">
               <div className="text-center mb-6">
-                <div className="text-4xl font-bold text-forest-600 mb-2">$15,000 - $35,000</div>
-                <p className="text-charcoal-600">Typical range for residential installations</p>
+                <div className="text-4xl font-bold text-primary-green mb-2">$15,000 - $35,000</div>
+                <p className="text-charcoal">Typical range for residential installations</p>
               </div>
 
-              <h3 className="headline-md text-charcoal-800 mb-4">Cost Variables</h3>
+              <h3 className="headline-md text-charcoal mb-4">Cost Variables</h3>
               <ul className="space-y-3 mb-6">
                 {[
                   "Home size (square footage)",
@@ -153,14 +153,14 @@ export default function AsphaltShinglesPage() {
                   "Decking repairs (if needed)",
                 ].map((variable, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <span className="text-forest-500">•</span>
-                    <span className="text-charcoal-700">{variable}</span>
+                    <span className="text-primary-green">•</span>
+                    <span className="text-charcoal">{variable}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="border-t border-charcoal-200 pt-6">
-                <h3 className="headline-md text-charcoal-800 mb-4">What's Included</h3>
+              <div className="border-t border-charcoal pt-6">
+                <h3 className="headline-md text-charcoal mb-4">What's Included</h3>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
                     "Complete tear-off & disposal",
@@ -173,8 +173,8 @@ export default function AsphaltShinglesPage() {
                     "Magnetic nail cleanup",
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-forest-500" />
-                      <span className="text-sm text-charcoal-700">{item}</span>
+                      <CheckCircle className="h-5 w-5 text-primary-green" />
+                      <span className="text-sm text-charcoal">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -182,7 +182,7 @@ export default function AsphaltShinglesPage() {
             </div>
 
             <div className="mt-8 text-center">
-              <p className="text-charcoal-600 mb-4">
+              <p className="text-charcoal mb-4">
                 Every home is unique. Schedule a complimentary assessment for your exact quote.
               </p>
               <Button variant="primary" size="lg" asChild>
@@ -194,10 +194,10 @@ export default function AsphaltShinglesPage() {
       </section>
 
       {/* Material Options */}
-      <section className="py-20 bg-ivory-50">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8 text-center">Premium Shingle Options</h2>
+            <h2 className="text-headline-sm text-charcoal mb-8 text-center">Premium Shingle Options</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -221,23 +221,23 @@ export default function AsphaltShinglesPage() {
               ].map((option, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <CardTitle className="headline-md text-charcoal-800">{option.brand}</CardTitle>
-                    <p className="text-sm font-semibold text-forest-600">{option.warranty}</p>
+                    <CardTitle className="headline-md text-charcoal">{option.brand}</CardTitle>
+                    <p className="text-sm font-semibold text-primary-green">{option.warranty}</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-charcoal-800 mb-2">Key Features:</h4>
+                      <h4 className="font-semibold text-charcoal mb-2">Key Features:</h4>
                       <ul className="space-y-1">
                         {option.features.map((feature, idx) => (
-                          <li key={idx} className="text-sm text-charcoal-600 flex items-start gap-2">
-                            <span className="text-forest-500">•</span>
+                          <li key={idx} className="text-sm text-charcoal flex items-start gap-2">
+                            <span className="text-primary-green">•</span>
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <div className="pt-4 border-t border-charcoal-200">
-                      <p className="text-sm text-charcoal-700">
+                    <div className="pt-4 border-t border-charcoal">
+                      <p className="text-sm text-charcoal">
                         <span className="font-semibold">Ideal for:</span> {option.ideal}
                       </p>
                     </div>
@@ -250,10 +250,10 @@ export default function AsphaltShinglesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8">Frequently Asked Questions</h2>
+            <h2 className="text-headline-sm text-charcoal mb-8">Frequently Asked Questions</h2>
             <div className="space-y-6">
               {[
                 {
@@ -277,9 +277,9 @@ export default function AsphaltShinglesPage() {
                   answer: "Most residential shingle installations complete in 1-3 days, depending on size and complexity. We'll provide an exact timeline during your consultation.",
                 },
               ].map((faq, index) => (
-                <div key={index} className="border-b border-charcoal-200 pb-6 last:border-0">
-                  <h3 className="headline-md text-charcoal-800 mb-3">{faq.question}</h3>
-                  <p className="text-charcoal-600">{faq.answer}</p>
+                <div key={index} className="border-b border-charcoal pb-6 last:border-0">
+                  <h3 className="headline-md text-charcoal mb-3">{faq.question}</h3>
+                  <p className="text-charcoal">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -288,14 +288,14 @@ export default function AsphaltShinglesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-forest-600 text-ivory-100">
+      <section className="py-20 bg-primary-green text-ivory">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="display-md mb-6">Ready for Your Premium Roof?</h2>
-          <p className="headline-md mb-8 max-w-2xl mx-auto font-normal">
+          <h2 className="text-headline-md mb-6">Ready for Your Premium Roof?</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto font-normal">
             Schedule a complimentary consultation and receive a detailed proposal with material samples
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-ivory-100 text-forest-700 hover:bg-ivory-200" asChild>
+            <Button size="lg" className="bg-ivory text-primary-green hover:bg-ivory" asChild>
               <Link href="/contact">Schedule Consultation</Link>
             </Button>
             <Button variant="secondary" size="lg" asChild>

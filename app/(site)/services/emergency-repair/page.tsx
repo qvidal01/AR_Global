@@ -13,18 +13,18 @@ export default function EmergencyRepairPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-red-900 to-charcoal-900 text-ivory-100">
+      <section className="relative py-20 bg-gradient-to-br from-red to-charcoal text-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 bg-red-600 rounded-full text-sm font-semibold mb-4 animate-pulse">
+            <div className="inline-block px-4 py-2 bg-red rounded-full text-sm font-semibold mb-4 animate-pulse">
               24/7 Available
             </div>
             <h1 className="display-lg mb-6">Emergency Roof Repair</h1>
-            <p className="headline-md font-normal text-ivory-200 mb-8">
+            <p className="headline-md font-normal text-ivory mb-8">
               Storm damage? Active leak? We provide immediate response and temporary protection when you need it most
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-ivory-100" asChild>
+              <Button size="lg" className="bg-red hover:bg-red text-ivory" asChild>
                 <a href="tel:+12145551234" className="flex items-center gap-2">
                   <Phone className="h-5 w-5" />
                   Call Emergency Line
@@ -39,10 +39,10 @@ export default function EmergencyRepairPage() {
       </section>
 
       {/* When to Call */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8 text-center">When to Call Emergency Service</h2>
+            <h2 className="text-headline-sm text-charcoal mb-8 text-center">When to Call Emergency Service</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
@@ -70,15 +70,15 @@ export default function EmergencyRepairPage() {
                   urgent: true,
                 },
               ].map((situation, index) => (
-                <Card key={index} className="border-2 border-red-200 bg-red-50">
+                <Card key={index} className="border-2 border-red bg-red">
                   <CardHeader>
                     <div className="flex items-start gap-4">
-                      <div className="h-12 w-12 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0">
-                        <situation.icon className="h-6 w-6 text-ivory-100" />
+                      <div className="h-12 w-12 rounded-full bg-red flex items-center justify-center flex-shrink-0">
+                        <situation.icon className="h-6 w-6 text-ivory" />
                       </div>
                       <div>
-                        <CardTitle className="text-charcoal-800">{situation.title}</CardTitle>
-                        <p className="text-sm text-charcoal-700 mt-2">{situation.description}</p>
+                        <CardTitle className="text-charcoal">{situation.title}</CardTitle>
+                        <p className="text-sm text-charcoal mt-2">{situation.description}</p>
                       </div>
                     </div>
                   </CardHeader>
@@ -86,15 +86,15 @@ export default function EmergencyRepairPage() {
               ))}
             </div>
 
-            <div className="mt-12 bg-charcoal-800 text-ivory-100 rounded-lg p-8 text-center">
-              <h3 className="headline-lg mb-4">Don't Wait—Call Now</h3>
-              <p className="text-ivory-200 mb-6">
+            <div className="mt-12 bg-charcoal rounded-lg p-8 text-center">
+              <h3 className="text-headline-lg mb-4">Don't Wait—Call Now</h3>
+              <p className="text-ivory mb-6">
                 Delaying emergency repairs can lead to extensive water damage, mold growth, and structural issues.
                 Our team is standing by to help.
               </p>
               <a
                 href="tel:+12145551234"
-                className="inline-flex items-center gap-3 text-3xl font-bold text-red-400 hover:text-red-300"
+                className="inline-flex items-center gap-3 text-3xl font-bold text-red hover:text-red"
               >
                 <Phone className="h-8 w-8" />
                 (214) 555-1234
@@ -105,10 +105,10 @@ export default function EmergencyRepairPage() {
       </section>
 
       {/* Our Emergency Process */}
-      <section className="py-20 bg-ivory-50">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8 text-center">Our Emergency Response Process</h2>
+            <h2 className="text-headline-sm text-charcoal mb-8 text-center">Our Emergency Response Process</h2>
             <div className="space-y-6">
               {[
                 {
@@ -137,12 +137,12 @@ export default function EmergencyRepairPage() {
                 },
               ].map((item, index) => (
                 <div key={index} className="flex gap-6 items-start">
-                  <div className="flex-shrink-0 h-16 w-16 rounded-full bg-red-600 text-ivory-100 flex items-center justify-center font-bold text-2xl">
+                  <div className="flex-shrink-0 h-16 w-16 rounded-full bg-red text-ivory flex items-center justify-center font-bold text-2xl">
                     {item.step}
                   </div>
                   <div className="flex-grow">
-                    <h3 className="headline-md text-charcoal-800 mb-2">{item.title}</h3>
-                    <p className="text-charcoal-600">{item.description}</p>
+                    <h3 className="headline-md text-charcoal mb-2">{item.title}</h3>
+                    <p className="text-charcoal">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -152,12 +152,12 @@ export default function EmergencyRepairPage() {
       </section>
 
       {/* Insurance Assistance */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-6">Insurance Claim Assistance</h2>
+            <h2 className="text-headline-sm text-charcoal mb-6">Insurance Claim Assistance</h2>
             <div className="prose prose-lg max-w-none mb-8">
-              <p className="text-body-lg text-charcoal-700 leading-relaxed">
+              <p className="text-body-lg text-charcoal leading-relaxed">
                 We work with insurance companies daily and understand the claims process inside and out. Our team will:
               </p>
             </div>
@@ -174,15 +174,15 @@ export default function EmergencyRepairPage() {
                 "Advocate for complete and fair settlements",
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <Shield className="h-5 w-5 text-forest-500 flex-shrink-0 mt-1" />
-                  <span className="text-charcoal-700">{item}</span>
+                  <Shield className="h-5 w-5 text-primary-green flex-shrink-0 mt-1" />
+                  <span className="text-charcoal">{item}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 bg-forest-50 border-2 border-forest-200 rounded-lg p-6">
-              <h3 className="headline-md text-charcoal-800 mb-3">We Work With All Major Insurers</h3>
-              <p className="text-charcoal-700">
+            <div className="mt-8 bg-primary-green border-2 border-primary-green rounded-lg p-6">
+              <h3 className="headline-md text-charcoal mb-3">We Work With All Major Insurers</h3>
+              <p className="text-charcoal">
                 State Farm • Allstate • Farmers • USAA • Liberty Mutual • Nationwide • Progressive • And more
               </p>
             </div>
@@ -191,10 +191,10 @@ export default function EmergencyRepairPage() {
       </section>
 
       {/* Common Emergency Scenarios */}
-      <section className="py-20 bg-ivory-50">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8 text-center">Common Emergency Scenarios</h2>
+            <h2 className="text-headline-sm text-charcoal mb-8 text-center">Common Emergency Scenarios</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
@@ -224,10 +224,10 @@ export default function EmergencyRepairPage() {
               ].map((scenario, index) => (
                 <Card key={index}>
                   <CardHeader>
-                    <CardTitle className="text-charcoal-800">{scenario.title}</CardTitle>
+                    <CardTitle className="text-charcoal">{scenario.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-charcoal-600">{scenario.description}</p>
+                    <p className="text-sm text-charcoal">{scenario.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -237,11 +237,11 @@ export default function EmergencyRepairPage() {
       </section>
 
       {/* Service Area */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="headline-xl text-charcoal-800 mb-6">Emergency Service Area</h2>
-            <p className="text-body-lg text-charcoal-700 mb-8">
+            <h2 className="text-headline-sm text-charcoal mb-6">Emergency Service Area</h2>
+            <p className="text-body-lg text-charcoal mb-8">
               We provide emergency roofing services throughout North Texas
             </p>
             <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto text-left">
@@ -250,8 +250,8 @@ export default function EmergencyRepairPage() {
                 "Little Elm", "The Colony", "Lewisville", "Carrollton", "Denton", "Tyler"
               ].map((city, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-red-500" />
-                  <span className="text-charcoal-700">{city}</span>
+                  <div className="h-2 w-2 rounded-full bg-red" />
+                  <span className="text-charcoal">{city}</span>
                 </div>
               ))}
             </div>
@@ -260,22 +260,22 @@ export default function EmergencyRepairPage() {
       </section>
 
       {/* Emergency CTA */}
-      <section className="py-20 bg-red-600 text-ivory-100">
+      <section className="py-20 bg-red text-ivory">
         <div className="container mx-auto px-4 text-center">
-          <AlertCircle className="h-16 w-16 mx-auto mb-6 text-ivory-100" />
-          <h2 className="display-md mb-6">Roofing Emergency? We're Here to Help</h2>
-          <p className="headline-md mb-8 max-w-2xl mx-auto font-normal">
+          <AlertCircle className="h-16 w-16 mx-auto mb-6 text-ivory" />
+          <h2 className="text-headline-md mb-6">Roofing Emergency? We're Here to Help</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto font-normal">
             Available 24 hours a day, 7 days a week for emergency roofing services
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-ivory-100 text-red-700 hover:bg-ivory-200 text-xl py-6" asChild>
+            <Button size="lg" className="bg-ivory text-red hover:bg-ivory text-xl py-6" asChild>
               <a href="tel:+12145551234" className="flex items-center gap-3">
                 <Phone className="h-6 w-6" />
                 (214) 555-1234
               </a>
             </Button>
           </div>
-          <p className="text-sm text-ivory-200 mt-6">
+          <p className="text-sm text-ivory mt-6">
             For non-emergency inquiries, use our contact form or call during business hours
           </p>
         </div>

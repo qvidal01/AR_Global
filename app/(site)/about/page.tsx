@@ -195,7 +195,7 @@ export default function AboutPage() {
       <section className="py-20 bg-forest-600 text-ivory-100">
         <div className="container mx-auto px-4 text-center">
           <h2 className="display-md mb-6">Experience the AR Global Difference</h2>
-          <p className="headline-md mb-8 max-w-2xl mx-auto font-normal">
+          <p className="text-xl mb-8 max-w-3xl mx-auto font-normal">
             Join thousands of satisfied homeowners who chose quality, transparency, and peace of mind
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

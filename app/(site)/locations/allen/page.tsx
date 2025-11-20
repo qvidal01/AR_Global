@@ -105,7 +105,7 @@ export default function AllenLocationPage() {
       <section className="py-20 bg-forest-600 text-ivory-100">
         <div className="container mx-auto px-4 text-center">
           <h2 className="display-md mb-6">Ready to Protect Your Allen Home?</h2>
-          <p className="headline-md mb-8 max-w-2xl mx-auto font-normal">
+          <p className="text-xl mb-8 max-w-3xl mx-auto font-normal">
             Schedule your complimentary consultation with Allen's trusted roofing experts
           </p>
           <Button size="lg" className="bg-ivory-100 text-forest-700 hover:bg-ivory-200" asChild>

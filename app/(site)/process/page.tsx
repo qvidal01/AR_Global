@@ -15,7 +15,7 @@ const phases = [
     clientTime: "1-hour meeting",
     whatHappens: "Comprehensive roof and attic inspection using drone technology, review of existing documentation, discussion of your goals and concerns.",
     deliverable: "Detailed inspection report with photos and recommendations",
-    color: "forest",
+    color: "primary-green",
   },
   {
     number: 2,
@@ -25,7 +25,7 @@ const phases = [
     clientTime: "1-hour proposal review",
     whatHappens: "Itemized cost breakdown, material samples presentation, 3D rendering of your home with selected materials, warranty explanation.",
     deliverable: "Complete written proposal with zero hidden fees",
-    color: "bronze",
+    color: "gold",
   },
   {
     number: 3,
@@ -35,7 +35,7 @@ const phases = [
     clientTime: "Minimal involvement",
     whatHappens: "Project manager introduction, material ordering, HOA coordination (if applicable), neighbor courtesy notifications, scheduling finalization.",
     deliverable: "Confirmed project schedule and preparation checklist",
-    color: "forest",
+    color: "primary-green",
   },
   {
     number: 4,
@@ -45,7 +45,7 @@ const phases = [
     clientTime: "You can be away",
     whatHappens: "Professional crew arrival, complete tear-off, installation of all components, daily check-ins, landscaping protection, magnetic nail sweeps.",
     deliverable: "Premium roof installed with meticulous attention to detail",
-    color: "bronze",
+    color: "gold",
   },
   {
     number: 5,
@@ -55,7 +55,7 @@ const phases = [
     clientTime: "30-minute walkthrough",
     whatHappens: "Owner inspection of completed work, comprehensive photo documentation, quality checklist review, final cleanup verification.",
     deliverable: "Quality assurance certificate and project photos",
-    color: "forest",
+    color: "primary-green",
   },
   {
     number: 6,
@@ -65,7 +65,7 @@ const phases = [
     clientTime: "Minimal",
     whatHappens: "Warranty registration with manufacturer, maintenance guide delivery, 60-day follow-up inspection, address any questions or concerns.",
     deliverable: "Warranty documents and maintenance guide",
-    color: "bronze",
+    color: "gold",
   },
   {
     number: 7,
@@ -75,7 +75,7 @@ const phases = [
     clientTime: "As needed",
     whatHappens: "Annual courtesy inspections, storm damage assessments, priority emergency service, transferable warranty support.",
     deliverable: "Peace of mind for as long as you own your home",
-    color: "forest",
+    color: "primary-green",
   },
 ]
 
@@ -86,11 +86,11 @@ export default function ProcessPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-charcoal-800 to-charcoal-900 text-ivory-100">
+      <section className="relative py-20 bg-gradient-to-br from-charcoal to-charcoal text-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="display-lg mb-6">Your AR Global Experience</h1>
-            <p className="headline-md font-normal text-ivory-200 mb-8">
+            <h1 className="text-headline-lg mb-6">Your AR Global Experience</h1>
+            <p className="headline-md font-normal text-ivory mb-8">
               Our proven 7-phase process delivers exceptional results with zero stress
             </p>
           </div>
@@ -98,7 +98,7 @@ export default function ProcessPage() {
       </section>
 
       {/* Interactive Timeline */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Phase Navigation */}
@@ -109,8 +109,8 @@ export default function ProcessPage() {
                   onClick={() => setActivePhase(p.number)}
                   className={`p-4 rounded-lg text-center transition-all ${
                     activePhase === p.number
-                      ? `bg-${p.color}-600 text-ivory-100 shadow-lg scale-105`
-                      : "bg-ivory-50 text-charcoal-700 hover:bg-ivory-200"
+                      ? `bg-${p.color} text-ivory shadow-lg scale-105`
+                      : "bg-ivory text-charcoal hover:bg-ivory"
                   }`}
                 >
                   <div className="font-bold text-2xl mb-1">{p.number}</div>
@@ -121,23 +121,23 @@ export default function ProcessPage() {
 
             {/* Active Phase Detail */}
             <Card className="overflow-hidden">
-              <div className={`h-2 bg-${phase.color}-600`}></div>
+              <div className={`h-2 bg-${phase.color}`}></div>
               <CardContent className="p-8">
                 <div className="flex items-start gap-6 mb-8">
-                  <div className={`h-16 w-16 rounded-full bg-${phase.color}-100 flex items-center justify-center flex-shrink-0`}>
-                    <phase.icon className={`h-8 w-8 text-${phase.color}-600`} />
+                  <div className={`h-16 w-16 rounded-full bg-${phase.color} flex items-center justify-center flex-shrink-0`}>
+                    <phase.icon className={`h-8 w-8 text-${phase.color}`} />
                   </div>
                   <div className="flex-grow">
-                    <div className="text-sm text-charcoal-500 mb-2">Phase {phase.number}</div>
-                    <h2 className="headline-xl text-charcoal-800 mb-4">{phase.title}</h2>
+                    <div className="text-sm text-charcoal mb-2">Phase {phase.number}</div>
+                    <h2 className="text-headline-sm text-charcoal mb-4">{phase.title}</h2>
                     <div className="flex flex-wrap gap-6 text-sm">
                       <div>
-                        <span className="font-semibold text-charcoal-800">Timeline: </span>
-                        <span className="text-charcoal-600">{phase.timeline}</span>
+                        <span className="font-semibold text-charcoal">Timeline: </span>
+                        <span className="text-charcoal">{phase.timeline}</span>
                       </div>
                       <div>
-                        <span className="font-semibold text-charcoal-800">Your Time: </span>
-                        <span className="text-charcoal-600">{phase.clientTime}</span>
+                        <span className="font-semibold text-charcoal">Your Time: </span>
+                        <span className="text-charcoal">{phase.clientTime}</span>
                       </div>
                     </div>
                   </div>
@@ -145,16 +145,16 @@ export default function ProcessPage() {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="font-semibold text-charcoal-800 mb-3">What Happens</h3>
-                    <p className="text-charcoal-700 leading-relaxed">{phase.whatHappens}</p>
+                    <h3 className="font-semibold text-charcoal mb-3">What Happens</h3>
+                    <p className="text-charcoal leading-relaxed">{phase.whatHappens}</p>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-charcoal-800 mb-3">What You Receive</h3>
-                    <p className="text-charcoal-700 leading-relaxed">{phase.deliverable}</p>
+                    <h3 className="font-semibold text-charcoal mb-3">What You Receive</h3>
+                    <p className="text-charcoal leading-relaxed">{phase.deliverable}</p>
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-charcoal-200 flex justify-between items-center">
+                <div className="mt-8 pt-8 border-t border-charcoal flex justify-between items-center">
                   <Button
                     variant="outline"
                     onClick={() => setActivePhase(Math.max(1, activePhase - 1))}
@@ -182,25 +182,25 @@ export default function ProcessPage() {
       </section>
 
       {/* Full Timeline View */}
-      <section className="py-20 bg-ivory-50">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="display-md text-center text-charcoal-800 mb-12">Complete Timeline</h2>
+            <h2 className="text-headline-md text-center text-charcoal mb-12">Complete Timeline</h2>
             <div className="space-y-12">
               {phases.map((phase, index) => (
                 <div key={phase.number} className="flex gap-8">
                   <div className="flex-shrink-0 w-32 text-right">
-                    <div className={`inline-block h-16 w-16 rounded-full bg-${phase.color}-600 text-ivory-100 flex items-center justify-center font-bold text-2xl`}>
+                    <div className={`inline-block h-16 w-16 rounded-full bg-${phase.color} text-ivory flex items-center justify-center font-bold text-2xl`}>
                       {phase.number}
                     </div>
                   </div>
-                  <div className={`flex-grow border-l-4 border-${phase.color}-300 pl-8 pb-12 ${index === phases.length - 1 ? "border-l-0" : ""}`}>
-                    <div className="mb-2 text-sm font-semibold text-forest-600">{phase.timeline}</div>
-                    <h3 className="headline-lg text-charcoal-800 mb-2">{phase.title}</h3>
-                    <p className="text-charcoal-600 mb-4">{phase.whatHappens}</p>
-                    <div className="bg-ivory-100 rounded-lg p-4 border-l-4 border-${phase.color}-500">
-                      <div className="text-sm font-semibold text-charcoal-800 mb-1">Deliverable:</div>
-                      <div className="text-sm text-charcoal-700">{phase.deliverable}</div>
+                  <div className={`flex-grow border-l-4 border-${phase.color} pl-8 pb-12 ${index === phases.length - 1 ? "border-l-0" : ""}`}>
+                    <div className="mb-2 text-sm font-semibold text-primary-green">{phase.timeline}</div>
+                    <h3 className="headline-lg text-charcoal mb-2">{phase.title}</h3>
+                    <p className="text-charcoal mb-4">{phase.whatHappens}</p>
+                    <div className="bg-ivory rounded-lg p-4 border-l-4 border-${phase.color}">
+                      <div className="text-sm font-semibold text-charcoal mb-1">Deliverable:</div>
+                      <div className="text-sm text-charcoal">{phase.deliverable}</div>
                     </div>
                   </div>
                 </div>
@@ -211,10 +211,10 @@ export default function ProcessPage() {
       </section>
 
       {/* What Sets Us Apart */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-center text-charcoal-800 mb-12">What Sets Our Process Apart</h2>
+            <h2 className="text-headline-sm text-center text-charcoal mb-12">What Sets Our Process Apart</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
@@ -251,10 +251,10 @@ export default function ProcessPage() {
                 },
               ].map((item, index) => (
                 <div key={index} className="flex gap-4">
-                  <CheckCircle className="h-6 w-6 text-forest-500 flex-shrink-0 mt-1" />
+                  <CheckCircle className="h-6 w-6 text-primary-green flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="headline-md text-charcoal-800 mb-2">{item.title}</h3>
-                    <p className="text-sm text-charcoal-600">{item.description}</p>
+                    <h3 className="headline-md text-charcoal mb-2">{item.title}</h3>
+                    <p className="text-sm text-charcoal">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -264,30 +264,30 @@ export default function ProcessPage() {
       </section>
 
       {/* Testimonial */}
-      <section className="py-20 bg-charcoal-800 text-ivory-100">
+      <section className="py-20 bg-charcoal text-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="text-6xl mb-6">"</div>
-            <blockquote className="headline-md font-normal text-ivory-200 mb-8">
+            <blockquote className="headline-md font-normal text-ivory mb-8">
               From the first consultation to the final walkthrough, AR Global's process was flawless. They communicated every step, protected our property meticulously, and delivered exactly what they promised. This is how roofing should be done.
             </blockquote>
             <div>
-              <div className="font-semibold text-ivory-100">Michael & Jennifer T.</div>
-              <div className="text-sm text-ivory-300">Prosper, TX</div>
+              <div className="font-semibold text-ivory">Michael & Jennifer T.</div>
+              <div className="text-sm text-ivory">Prosper, TX</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-forest-600 text-ivory-100">
+      <section className="py-20 bg-primary-green text-ivory">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="display-md mb-6">Experience the AR Global Difference</h2>
-          <p className="headline-md mb-8 max-w-2xl mx-auto font-normal">
+          <h2 className="text-headline-md mb-6">Experience the AR Global Difference</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto font-normal">
             Schedule your discovery consultation and see our process in action
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-ivory-100 text-forest-700 hover:bg-ivory-200" asChild>
+            <Button size="lg" className="bg-ivory text-primary-green hover:bg-ivory" asChild>
               <Link href="/contact">Schedule Consultation</Link>
             </Button>
             <Button variant="secondary" size="lg" asChild>

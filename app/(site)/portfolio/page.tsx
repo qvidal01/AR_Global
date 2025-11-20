@@ -93,10 +93,10 @@ export default function PortfolioPage() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-charcoal-800 to-charcoal-900 text-ivory-100">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="display-lg mb-6">Our Portfolio</h1>
-            <p className="headline-md font-normal text-ivory-200 mb-8">
+            <h1 className="display-lg mb-6 px-4">Our Portfolio</h1>
+            <p className="headline-md font-normal text-ivory-200 mb-8 px-4">
               Explore our recent projects showcasing premium craftsmanship and attention to detail
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -211,7 +211,7 @@ export default function PortfolioPage() {
       <section className="py-20 bg-forest-600 text-ivory-100">
         <div className="container mx-auto px-4 text-center">
           <h2 className="display-md mb-6">Ready to Start Your Project?</h2>
-          <p className="headline-md mb-8 max-w-2xl mx-auto font-normal">
+          <p className="text-xl mb-8 max-w-3xl mx-auto font-normal">
             Join our portfolio of satisfied homeowners with a premium roofing installation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

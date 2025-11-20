@@ -4,12 +4,12 @@ import { Home, Search, Phone } from "lucide-react"
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-ivory-100 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-ivory flex items-center justify-center px-4">
       <div className="max-w-2xl mx-auto text-center">
         <div className="mb-8">
-          <h1 className="display-xl text-charcoal-800 mb-4">404</h1>
-          <h2 className="headline-xl text-charcoal-700 mb-4">Page Not Found</h2>
-          <p className="text-body-lg text-charcoal-600 mb-8">
+          <h1 className="text-headline-lg text-charcoal mb-4">404</h1>
+          <h2 className="text-headline-sm text-charcoal mb-4">Page Not Found</h2>
+          <p className="text-body-lg text-charcoal mb-8">
             We couldn't find the page you're looking for. The page may have been moved, deleted, or never existed.
           </p>
         </div>
@@ -29,36 +29,36 @@ export default function NotFound() {
           </Button>
         </div>
 
-        <div className="border-t border-charcoal-200 pt-8">
-          <h3 className="headline-md text-charcoal-800 mb-4">Popular Pages</h3>
+        <div className="border-t border-charcoal pt-8">
+          <h3 className="headline-md text-charcoal mb-4">Popular Pages</h3>
           <div className="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto">
-            <Link href="/services" className="text-forest-600 hover:text-forest-700 font-medium">
+            <Link href="/services" className="text-primary-green hover:text-primary-green font-medium">
               Our Services
             </Link>
-            <Link href="/portfolio" className="text-forest-600 hover:text-forest-700 font-medium">
+            <Link href="/portfolio" className="text-primary-green hover:text-primary-green font-medium">
               Portfolio
             </Link>
-            <Link href="/process" className="text-forest-600 hover:text-forest-700 font-medium">
+            <Link href="/process" className="text-primary-green hover:text-primary-green font-medium">
               Our Process
             </Link>
-            <Link href="/investment-guide" className="text-forest-600 hover:text-forest-700 font-medium">
+            <Link href="/investment-guide" className="text-primary-green hover:text-primary-green font-medium">
               Investment Guide
             </Link>
-            <Link href="/about" className="text-forest-600 hover:text-forest-700 font-medium">
+            <Link href="/about" className="text-primary-green hover:text-primary-green font-medium">
               About Us
             </Link>
-            <Link href="/reviews" className="text-forest-600 hover:text-forest-700 font-medium">
+            <Link href="/reviews" className="text-primary-green hover:text-primary-green font-medium">
               Customer Reviews
             </Link>
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-charcoal-800 rounded-lg text-ivory-100">
+        <div className="mt-12 p-6 bg-charcoal rounded-lg text-ivory">
           <h3 className="headline-md mb-2">Need Immediate Assistance?</h3>
-          <p className="text-ivory-200 mb-4">Call us anytime for roofing emergencies</p>
+          <p className="text-ivory mb-4">Call us anytime for roofing emergencies</p>
           <a
             href="tel:+12145551234"
-            className="text-bronze-400 hover:text-bronze-300 text-xl font-semibold"
+            className="text-gold hover:text-gold text-xl font-semibold"
           >
             (214) 555-1234
           </a>

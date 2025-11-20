@@ -7,13 +7,13 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-charcoal-800 to-charcoal-900 text-ivory-100">
+      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-charcoal to-charcoal text-ivory-100">
         <div className="absolute inset-0 bg-black/40 z-0"></div>
-        <div className="container mx-auto px-4 z-10 text-center">
-          <h1 className="display-xl mb-6 text-ivory-100">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 z-10 text-center">
+          <h1 className="text-headline-lg mb-6 text-ivory px-4">
             The Last Roof Your Home Will Ever Need
           </h1>
-          <p className="headline-md mb-8 text-ivory-200 max-w-3xl mx-auto font-normal">
+          <p className="headline-md mb-8 text-ivory max-w-3xl mx-auto font-normal px-4">
             Premium roofing craftsmanship for discerning homeowners who value peace of mind and generational quality
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -28,7 +28,7 @@ export default function HomePage() {
             <div className="inline-block animate-bounce">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-ivory-200"
+                className="h-6 w-6 text-ivory"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -46,12 +46,12 @@ export default function HomePage() {
       </section>
 
       {/* Problem-Solution Statement */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div className="space-y-4">
-              <h2 className="headline-xl text-charcoal-800">The Typical Roofing Experience</h2>
-              <ul className="space-y-3 text-charcoal-600">
+              <h2 className="text-headline-sm text-charcoal">The Typical Roofing Experience</h2>
+              <ul className="space-y-3 text-charcoal">
                 <li className="flex items-start">
                   <span className="text-red-500 mr-2">✗</span>
                   <span>Competing on price, cutting corners on quality</span>
@@ -71,10 +71,10 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="space-y-4">
-              <h2 className="headline-xl text-forest-600">The AR Global Difference</h2>
-              <ul className="space-y-3 text-charcoal-700">
+              <h2 className="text-headline-sm text-primary-green">The AR Global Difference</h2>
+              <ul className="space-y-3 text-charcoal">
                 <li className="flex items-start">
-                  <CheckCircle className="text-forest-500 mr-2 h-5 w-5 mt-0.5" />
+                  <CheckCircle className="text-primary-green mr-2 h-5 w-5 mt-0.5" />
                   <span>Premium materials and meticulous craftsmanship</span>
                 </li>
                 <li className="flex items-start">
@@ -96,11 +96,11 @@ export default function HomePage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-ivory-50">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="display-md text-charcoal-800 mb-4">Our Services</h2>
-            <p className="text-body-lg text-charcoal-600 max-w-2xl mx-auto">
+          <div className="text-center mb-12 max-w-4xl mx-auto px-4">
+            <h2 className="text-headline-md text-charcoal mb-4">Our Services</h2>
+            <p className="text-lg text-charcoal leading-relaxed">
               From residential to commercial, we provide comprehensive roofing solutions tailored to your needs
             </p>
           </div>
@@ -134,7 +134,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="mb-4">{service.description}</CardDescription>
-                  <Link href="/services" className="text-forest-600 hover:text-forest-700 font-medium text-sm">
+                  <Link href="/services" className="text-primary-green hover:text-primary-green font-medium text-sm">
                     Learn More →
                   </Link>
                 </CardContent>
@@ -145,33 +145,33 @@ export default function HomePage() {
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-20 bg-charcoal-800 text-ivory-100">
+      <section className="py-20 bg-charcoal-800 text-ivory">
         <div className="container mx-auto px-4">
           {/* Stats Bar */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto text-center">
             <div>
-              <div className="headline-xl text-bronze-400 mb-2">20+</div>
-              <div className="text-ivory-200">Years in Business</div>
+              <div className="text-headline-sm text-gold mb-2">20+</div>
+              <div className="text-ivory">Years in Business</div>
             </div>
             <div>
-              <div className="headline-xl text-bronze-400 mb-2">5,000+</div>
-              <div className="text-ivory-200">Projects Completed</div>
+              <div className="text-headline-sm text-gold mb-2">5,000+</div>
+              <div className="text-ivory">Projects Completed</div>
             </div>
             <div>
-              <div className="headline-xl text-bronze-400 mb-2">98%</div>
-              <div className="text-ivory-200">Client Satisfaction</div>
+              <div className="text-headline-sm text-gold mb-2">98%</div>
+              <div className="text-ivory">Client Satisfaction</div>
             </div>
           </div>
 
           {/* Featured Reviews */}
           <div className="text-center mb-12">
-            <h2 className="display-md text-ivory-100 mb-4">What Our Clients Say</h2>
+            <h2 className="text-headline-md text-ivory mb-4">What Our Clients Say</h2>
             <div className="flex justify-center mb-4">
               {[1, 2, 3, 4, 5].map((star) => (
-                <Star key={star} className="h-6 w-6 text-bronze-400 fill-bronze-400" />
+                <Star key={star} className="h-6 w-6 text-gold fill-gold" />
               ))}
             </div>
-            <p className="text-ivory-200">Rated 4.9/5 from 250+ reviews</p>
+            <p className="text-ivory">Rated 4.9/5 from 250+ reviews</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -192,18 +192,18 @@ export default function HomePage() {
                 review: "The white-glove service was evident from day one. Our project manager kept us informed every step of the way. Truly a world-class experience.",
               },
             ].map((testimonial, index) => (
-              <Card key={index} className="bg-charcoal-700 border-charcoal-600 text-ivory-100">
+              <Card key={index} className="bg-charcoal border-charcoal text-ivory">
                 <CardHeader>
                   <div className="flex mb-2">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="h-4 w-4 text-bronze-400 fill-bronze-400" />
+                      <Star key={star} className="h-4 w-4 text-gold fill-gold" />
                     ))}
                   </div>
-                  <CardTitle className="text-ivory-100">{testimonial.name}</CardTitle>
-                  <CardDescription className="text-ivory-300">{testimonial.location}</CardDescription>
+                  <CardTitle className="text-ivory">{testimonial.name}</CardTitle>
+                  <CardDescription className="text-ivory">{testimonial.location}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-ivory-200">{testimonial.review}</p>
+                  <p className="text-sm text-ivory">{testimonial.review}</p>
                 </CardContent>
               </Card>
             ))}
@@ -218,10 +218,10 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-forest-600 text-ivory-100">
+      <section className="py-20 bg-primary-green text-ivory">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="display-md mb-6">Ready to Protect Your Investment?</h2>
-          <p className="headline-md mb-8 max-w-2xl mx-auto font-normal">
+          <h2 className="text-headline-md mb-6">Ready to Protect Your Investment?</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto font-normal">
             Schedule a complimentary consultation and discover why discerning homeowners choose AR Global
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

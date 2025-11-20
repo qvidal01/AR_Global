@@ -21,70 +21,72 @@ export function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-charcoal-200 bg-ivory-100/95 backdrop-blur supports-[backdrop-filter]:bg-ivory-100/60">
-      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2" aria-label="AR Global Roofing - Home">
-          <span className="headline-md font-bold text-charcoal-800">
-            AR Global Roofing
-          </span>
-        </Link>
+    <header className="sticky top-0 z-50 w-full border-b border-charcoal bg-ivory/95 backdrop-blur supports-[backdrop-filter]:bg-ivory/60">
+      <div className="w-full mx-auto px-8 md:px-12 lg:px-16 xl:px-20">
+        <div className="flex h-20 items-center justify-between gap-6">
+          {/* Logo */}
+          <Link href="/" className="flex-shrink-0 ml-4" aria-label="AR Global Roofing - Home">
+            <span className="text-xl md:text-2xl font-bold text-charcoal whitespace-nowrap">
+              AR Global Roofing
+            </span>
+          </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-6" aria-label="Main navigation">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium text-charcoal-700 hover:text-forest-500 transition-colors"
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-6 flex-1 justify-center" aria-label="Main navigation">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium text-charcoal hover:text-primary-green transition-colors whitespace-nowrap px-2"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Desktop CTA */}
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-shrink-0 mr-4">
+            <a
+              href="tel:+12145551234"
+              className="flex items-center gap-2 text-sm font-medium text-charcoal hover:text-primary-green transition-colors whitespace-nowrap"
+              onClick={() => trackPhoneClick("header_desktop")}
+              aria-label="Call (214) 555-1234"
             >
-              {item.name}
-            </Link>
-          ))}
-        </nav>
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              <span>(214) 555-1234</span>
+            </a>
+            <Button variant="primary" className="px-8 py-3" asChild>
+              <Link
+                href="/contact"
+                onClick={() => trackCTAClick("Schedule Consultation", "header_desktop")}
+              >
+                Schedule Consultation
+              </Link>
+            </Button>
+          </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden lg:flex items-center space-x-4">
-          <a
-            href="tel:+12145551234"
-            className="flex items-center space-x-2 text-sm font-medium text-charcoal-700 hover:text-forest-500 transition-colors"
-            onClick={() => trackPhoneClick("header_desktop")}
-            aria-label="Call (214) 555-1234"
+          {/* Mobile menu button */}
+          <button
+            className="lg:hidden p-2 flex-shrink-0"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
           >
-            <Phone className="h-4 w-4" aria-hidden="true" />
-            <span>(214) 555-1234</span>
-          </a>
-          <Button variant="primary" asChild>
-            <Link
-              href="/contact"
-              onClick={() => trackCTAClick("Schedule Consultation", "header_desktop")}
-            >
-              Schedule Consultation
-            </Link>
-          </Button>
+            {isMenuOpen ? (
+              <X className="h-6 w-6 text-charcoal" />
+            ) : (
+              <Menu className="h-6 w-6 text-charcoal" />
+            )}
+          </button>
         </div>
-
-        {/* Mobile menu button */}
-        <button
-          className="lg:hidden p-2"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-navigation"
-        >
-          {isMenuOpen ? (
-            <X className="h-6 w-6 text-charcoal-800" />
-          ) : (
-            <Menu className="h-6 w-6 text-charcoal-800" />
-          )}
-        </button>
       </div>
 
       {/* Mobile Navigation */}
       <div
         id="mobile-navigation"
         className={cn(
-          "lg:hidden border-t border-charcoal-200 bg-ivory-100",
+          "lg:hidden border-t border-charcoal bg-ivory",
           isMenuOpen ? "block" : "hidden"
         )}
       >
@@ -93,7 +95,7 @@ export function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="block py-2 text-base font-medium text-charcoal-700 hover:text-forest-500 transition-colors"
+              className="block py-2 text-base font-medium text-charcoal hover:text-primary-green transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
@@ -102,7 +104,7 @@ export function Header() {
           <div className="pt-4 space-y-3">
             <a
               href="tel:+12145551234"
-              className="flex items-center space-x-2 py-2 text-base font-medium text-charcoal-700 hover:text-forest-500 transition-colors"
+              className="flex items-center space-x-2 py-2 text-base font-medium text-charcoal hover:text-primary-green transition-colors"
               onClick={() => trackPhoneClick("header_mobile")}
               aria-label="Call (214) 555-1234"
             >

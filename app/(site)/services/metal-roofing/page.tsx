@@ -13,14 +13,14 @@ export default function MetalRoofingPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-charcoal-800 to-charcoal-900 text-ivory-100">
+      <section className="relative py-20 bg-gradient-to-br from-charcoal to-charcoal text-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-block px-4 py-2 bg-bronze-500 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-gold rounded-full text-sm font-semibold mb-4">
               Lifetime Investment
             </div>
-            <h1 className="display-lg mb-6">Metal Roofing Systems</h1>
-            <p className="headline-md font-normal text-ivory-200 mb-8">
+            <h1 className="text-headline-lg mb-6">Metal Roofing Systems</h1>
+            <p className="headline-md font-normal text-ivory mb-8">
               Energy-efficient metal roofing designed for Texas heat and severe weather with modern aesthetics and lifetime durability
             </p>
             <Button variant="primary" size="lg" asChild>
@@ -31,15 +31,15 @@ export default function MetalRoofingPage() {
       </section>
 
       {/* Overview */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-6">Overview</h2>
+            <h2 className="text-headline-sm text-charcoal mb-6">Overview</h2>
             <div className="prose prose-lg max-w-none">
-              <p className="text-body-lg text-charcoal-700 leading-relaxed mb-4">
+              <p className="text-body-lg text-charcoal leading-relaxed mb-4">
                 Metal roofing represents the pinnacle of roofing technology, combining unparalleled longevity with superior energy efficiency and modern aesthetics. While metal roofs require a higher initial investment, they often outlast 2-3 traditional roofs, making them remarkably cost-effective over time.
               </p>
-              <p className="text-body-lg text-charcoal-700 leading-relaxed">
+              <p className="text-body-lg text-charcoal leading-relaxed">
                 Our metal roofing systems are specifically engineered for Texas conditions—reflecting solar heat to reduce cooling costs by up to 25%, standing up to hail storms, and providing exceptional wind resistance up to 140 MPH.
               </p>
             </div>
@@ -47,11 +47,11 @@ export default function MetalRoofingPage() {
             <div className="grid md:grid-cols-3 gap-6 mt-12">
               <Card>
                 <CardHeader>
-                  <Sun className="h-10 w-10 text-bronze-500 mb-2" />
+                  <Sun className="h-10 w-10 text-gold mb-2" />
                   <CardTitle>Energy Star Certified</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-charcoal-600">
+                  <p className="text-sm text-charcoal">
                     Reduce cooling costs by 10-25% with reflective cool roof technology
                   </p>
                 </CardContent>
@@ -59,11 +59,11 @@ export default function MetalRoofingPage() {
 
               <Card>
                 <CardHeader>
-                  <Shield className="h-10 w-10 text-bronze-500 mb-2" />
+                  <Shield className="h-10 w-10 text-gold mb-2" />
                   <CardTitle>50+ Year Lifespan</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-charcoal-600">
+                  <p className="text-sm text-charcoal">
                     Outlasts 2-3 asphalt roofs with minimal maintenance required
                   </p>
                 </CardContent>
@@ -71,11 +71,11 @@ export default function MetalRoofingPage() {
 
               <Card>
                 <CardHeader>
-                  <Zap className="h-10 w-10 text-bronze-500 mb-2" />
+                  <Zap className="h-10 w-10 text-gold mb-2" />
                   <CardTitle>Class 4 Impact Rated</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-charcoal-600">
+                  <p className="text-sm text-charcoal">
                     Superior hail resistance—the highest impact rating available
                   </p>
                 </CardContent>
@@ -86,10 +86,10 @@ export default function MetalRoofingPage() {
       </section>
 
       {/* Key Benefits */}
-      <section className="py-20 bg-ivory-50">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8">Why Choose Metal Roofing?</h2>
+            <h2 className="text-headline-sm text-charcoal mb-8">Why Choose Metal Roofing?</h2>
             <div className="space-y-6">
               {[
                 {
@@ -118,10 +118,10 @@ export default function MetalRoofingPage() {
                 },
               ].map((benefit, index) => (
                 <div key={index} className="flex gap-4 items-start">
-                  <CheckCircle className="h-6 w-6 text-bronze-500 flex-shrink-0 mt-1" />
+                  <CheckCircle className="h-6 w-6 text-gold flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="headline-md text-charcoal-800 mb-2">{benefit.title}</h3>
-                    <p className="text-charcoal-600">{benefit.description}</p>
+                    <h3 className="headline-md text-charcoal mb-2">{benefit.title}</h3>
+                    <p className="text-charcoal">{benefit.description}</p>
                   </div>
                 </div>
               ))}
@@ -131,35 +131,35 @@ export default function MetalRoofingPage() {
       </section>
 
       {/* Investment Range */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8">Investment Range</h2>
-            <div className="bg-ivory-50 border-2 border-bronze-200 rounded-lg p-8">
+            <h2 className="text-headline-sm text-charcoal mb-8">Investment Range</h2>
+            <div className="bg-ivory border-2 border-gold rounded-lg p-8">
               <div className="text-center mb-6">
-                <div className="text-4xl font-bold text-bronze-600 mb-2">$40,000 - $100,000+</div>
-                <p className="text-charcoal-600">Typical range for residential installations</p>
+                <div className="text-4xl font-bold text-gold mb-2">$40,000 - $100,000+</div>
+                <p className="text-charcoal">Typical range for residential installations</p>
               </div>
 
-              <div className="bg-bronze-50 border border-bronze-200 rounded-lg p-6 mb-6">
-                <h3 className="font-semibold text-charcoal-800 mb-3">Lifetime Cost Analysis</h3>
-                <p className="text-sm text-charcoal-700 mb-4">
-                  While metal roofs cost 2-3x more upfront, they last 50+ years vs. 20-30 for asphalt. Over a 50-year period:
+              <div className="bg-gold border border-gold rounded-lg p-6 mb-6">
+                <h3 className="font-semibold text-charcoal mb-3">Lifetime Cost Analysis</h3>
+                <p className="text-sm text-charcoal mb-4">
+                  While metal roofs cost 2-3x more upfront, they last 50+ years (vs. 20-30 for asphalt). Over a 50-year period:
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="font-semibold text-charcoal-800">Asphalt (3 roofs)</p>
-                    <p className="text-charcoal-600">$45,000 - $105,000+</p>
+                    <p className="font-semibold text-charcoal">Asphalt (3 roofs)</p>
+                    <p className="text-charcoal">$45,000 - $105,000+</p>
                   </div>
                   <div>
-                    <p className="font-semibold text-charcoal-800">Metal (1 roof)</p>
-                    <p className="text-charcoal-600">$40,000 - $100,000</p>
+                    <p className="font-semibold text-charcoal">Metal (1 roof)</p>
+                    <p className="text-charcoal">$40,000 - $100,000</p>
                   </div>
                 </div>
-                <p className="text-xs text-charcoal-600 mt-4">Plus energy savings of $200-400/year</p>
+                <p className="text-xs text-charcoal mt-4">Plus energy savings of $200-400/year</p>
               </div>
 
-              <h3 className="headline-md text-charcoal-800 mb-4">What's Included</h3>
+              <h3 className="headline-md text-charcoal mb-4">What's Included</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   "Premium metal panels/shingles",
@@ -172,8 +172,8 @@ export default function MetalRoofingPage() {
                   "Lifetime paint warranty",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-bronze-500" />
-                    <span className="text-sm text-charcoal-700">{item}</span>
+                    <CheckCircle className="h-5 w-5 text-gold" />
+                    <span className="text-sm text-charcoal">{item}</span>
                   </div>
                 ))}
               </div>
@@ -189,10 +189,10 @@ export default function MetalRoofingPage() {
       </section>
 
       {/* Material Options */}
-      <section className="py-20 bg-ivory-50">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8 text-center">Metal Roofing Options</h2>
+            <h2 className="text-headline-sm text-charcoal mb-8 text-center">Metal Roofing Options</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
@@ -222,23 +222,23 @@ export default function MetalRoofingPage() {
               ].map((option, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <CardTitle className="headline-md text-charcoal-800">{option.type}</CardTitle>
-                    <p className="text-sm text-charcoal-600">{option.description}</p>
+                    <CardTitle className="headline-md text-charcoal">{option.type}</CardTitle>
+                    <p className="text-sm text-charcoal">{option.description}</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-charcoal-800 mb-2">Features:</h4>
+                      <h4 className="font-semibold text-charcoal mb-2">Features:</h4>
                       <ul className="space-y-1">
                         {option.features.map((feature, idx) => (
-                          <li key={idx} className="text-sm text-charcoal-600 flex items-start gap-2">
-                            <span className="text-bronze-500">•</span>
+                          <li key={idx} className="text-sm text-charcoal flex items-start gap-2">
+                            <span className="text-gold">•</span>
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <div className="pt-4 border-t border-charcoal-200">
-                      <p className="text-sm text-charcoal-700">
+                    <div className="pt-4 border-t border-charcoal">
+                      <p className="text-sm text-charcoal">
                         <span className="font-semibold">Ideal for:</span> {option.ideal}
                       </p>
                     </div>
@@ -251,10 +251,10 @@ export default function MetalRoofingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8">Frequently Asked Questions</h2>
+            <h2 className="text-headline-sm text-charcoal mb-8">Frequently Asked Questions</h2>
             <div className="space-y-6">
               {[
                 {
@@ -278,9 +278,9 @@ export default function MetalRoofingPage() {
                   answer: "No. This is a common myth. Metal roofs don't attract lightning, and if struck, they actually disperse energy more safely than combustible roofing materials. Metal is non-combustible with the highest fire rating.",
                 },
               ].map((faq, index) => (
-                <div key={index} className="border-b border-charcoal-200 pb-6 last:border-0">
-                  <h3 className="headline-md text-charcoal-800 mb-3">{faq.question}</h3>
-                  <p className="text-charcoal-600">{faq.answer}</p>
+                <div key={index} className="border-b border-charcoal pb-6 last:border-0">
+                  <h3 className="headline-md text-charcoal mb-3">{faq.question}</h3>
+                  <p className="text-charcoal">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -289,14 +289,14 @@ export default function MetalRoofingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-bronze-600 text-ivory-100">
+      <section className="py-20 bg-gold text-ivory">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="display-md mb-6">Invest in a Lifetime Roof</h2>
-          <p className="headline-md mb-8 max-w-2xl mx-auto font-normal">
+          <h2 className="text-headline-md mb-6">Invest in a Lifetime Roof</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto font-normal">
             Schedule a consultation to learn if metal roofing is right for your home
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-ivory-100 text-bronze-700 hover:bg-ivory-200" asChild>
+            <Button size="lg" className="bg-ivory text-gold hover:bg-ivory" asChild>
               <Link href="/contact">Schedule Consultation</Link>
             </Button>
             <Button variant="secondary" size="lg" asChild>

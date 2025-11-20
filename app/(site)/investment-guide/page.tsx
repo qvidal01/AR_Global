@@ -40,10 +40,10 @@ export default function InvestmentGuidePage() {
       </section>
 
       {/* Investment Tiers */}
-      <section className="py-20 bg-ivory-50">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="display-md text-center text-charcoal-800 mb-12">Investment Tiers</h2>
+            <h2 className="text-headline-md text-center text-charcoal mb-12">Investment Tiers</h2>
             <div className="grid lg:grid-cols-3 gap-8">
               {[
                 {
@@ -100,37 +100,37 @@ export default function InvestmentGuidePage() {
               ].map((tier, index) => (
                 <Card key={index} className="hover:shadow-xl transition-shadow">
                   <CardHeader>
-                    <div className={`h-14 w-14 rounded-full bg-${tier.color}-100 flex items-center justify-center mb-4`}>
-                      <tier.icon className={`h-7 w-7 text-${tier.color}-600`} />
+                    <div className={`h-14 w-14 rounded-full bg-${tier.color} flex items-center justify-center mb-4`}>
+                      <tier.icon className={`h-7 w-7 text-${tier.color}`} />
                     </div>
-                    <CardTitle className="headline-xl text-charcoal-800">{tier.tier}</CardTitle>
+                    <CardTitle className="text-headline-sm text-charcoal">{tier.tier}</CardTitle>
                     <CardDescription>
-                      <span className="text-2xl font-bold text-forest-600">{tier.range}</span>
+                      <span className="text-2xl font-bold text-primary-green">{tier.range}</span>
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    <p className="text-sm text-charcoal-700">{tier.description}</p>
+                    <p className="text-sm text-charcoal">{tier.description}</p>
 
                     <div>
-                      <h4 className="font-semibold text-charcoal-800 mb-3 text-sm">What's Included:</h4>
+                      <h4 className="font-semibold text-charcoal mb-3 text-sm">What's Included:</h4>
                       <ul className="space-y-2">
                         {tier.included.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-sm text-charcoal-700">
-                            <CheckCircle className="h-4 w-4 text-forest-500 flex-shrink-0 mt-0.5" />
+                          <li key={idx} className="flex items-start gap-2 text-sm text-charcoal">
+                            <CheckCircle className="h-4 w-4 text-primary-green flex-shrink-0 mt-0.5" />
                             <span>{item}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="pt-4 border-t border-charcoal-200 space-y-2">
+                    <div className="pt-4 border-t border-charcoal space-y-2">
                       <div>
-                        <span className="text-xs font-semibold text-charcoal-800">Ideal For: </span>
-                        <span className="text-xs text-charcoal-600">{tier.idealFor}</span>
+                        <span className="text-xs font-semibold text-charcoal">Ideal For: </span>
+                        <span className="text-xs text-charcoal">{tier.idealFor}</span>
                       </div>
                       <div>
-                        <span className="text-xs font-semibold text-charcoal-800">Typical Project: </span>
-                        <span className="text-xs text-charcoal-600">{tier.typical}</span>
+                        <span className="text-xs font-semibold text-charcoal">Typical Project: </span>
+                        <span className="text-xs text-charcoal">{tier.typical}</span>
                       </div>
                     </div>
                   </CardContent>
@@ -142,10 +142,10 @@ export default function InvestmentGuidePage() {
       </section>
 
       {/* Cost Variables */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8">What Affects Your Investment?</h2>
+            <h2 className="text-headline-sm text-charcoal mb-8">What Affects Your Investment?</h2>
             <div className="space-y-6">
               {[
                 {
@@ -181,9 +181,9 @@ export default function InvestmentGuidePage() {
                   description: "We include complete disposal in our pricing. Some contractors charge extra for multiple layers or specific materials.",
                 },
               ].map((item, index) => (
-                <div key={index} className="border-b border-charcoal-200 pb-6 last:border-0">
-                  <h3 className="headline-md text-charcoal-800 mb-2">{item.factor}</h3>
-                  <p className="text-charcoal-600">{item.description}</p>
+                <div key={index} className="border-b border-charcoal pb-6 last:border-0">
+                  <h3 className="headline-md text-charcoal mb-2">{item.factor}</h3>
+                  <p className="text-charcoal">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -192,12 +192,12 @@ export default function InvestmentGuidePage() {
       </section>
 
       {/* Financing Options */}
-      <section className="py-20 bg-ivory-50">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8">Financing Options</h2>
+            <h2 className="text-headline-sm text-charcoal mb-8">Financing Options</h2>
             <div className="prose prose-lg max-w-none mb-8">
-              <p className="text-body-lg text-charcoal-700 leading-relaxed">
+              <p className="text-body-lg text-charcoal leading-relaxed">
                 We partner with Synchrony Financial to offer flexible payment options that make premium roofing accessible. Our financing includes:
               </p>
             </div>
@@ -208,10 +208,10 @@ export default function InvestmentGuidePage() {
                   <CardTitle>0% Introductory APR</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-charcoal-700 mb-4">
+                  <p className="text-sm text-charcoal mb-4">
                     6-18 month promotional financing with approved credit. Pay no interest when paid in full during promotional period.
                   </p>
-                  <p className="text-xs text-charcoal-600">Subject to credit approval. Terms vary by promotion.</p>
+                  <p className="text-xs text-charcoal">Subject to credit approval. Terms vary by promotion.</p>
                 </CardContent>
               </Card>
 
@@ -220,17 +220,17 @@ export default function InvestmentGuidePage() {
                   <CardTitle>Fixed Rate Plans</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-charcoal-700 mb-4">
+                  <p className="text-sm text-charcoal mb-4">
                     24-60 month fixed APR plans starting at 4.99%. Predictable monthly payments that fit your budget.
                   </p>
-                  <p className="text-xs text-charcoal-600">Rates depend on creditworthiness and term length.</p>
+                  <p className="text-xs text-charcoal">Rates depend on creditworthiness and term length.</p>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="bg-forest-50 border-2 border-forest-200 rounded-lg p-6">
-              <h3 className="headline-md text-charcoal-800 mb-3">Quick & Easy Application</h3>
-              <p className="text-charcoal-700 mb-4">
+            <div className="bg-primary-green border-2 border-primary-green rounded-lg p-6">
+              <h3 className="headline-md text-charcoal mb-3">Quick & Easy Application</h3>
+              <p className="text-charcoal mb-4">
                 Apply online in minutes with instant credit decisions. No impact to your credit score to check pre-qualification.
               </p>
               <Button variant="primary" asChild>
@@ -242,10 +242,10 @@ export default function InvestmentGuidePage() {
       </section>
 
       {/* ROI Discussion */}
-      <section className="py-20 bg-ivory-100">
+      <section className="py-20 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="headline-xl text-charcoal-800 mb-8">Return on Investment</h2>
+            <h2 className="text-headline-sm text-charcoal mb-8">Return on Investment</h2>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {[
                 {
@@ -266,18 +266,18 @@ export default function InvestmentGuidePage() {
               ].map((stat, index) => (
                 <Card key={index} className="text-center">
                   <CardHeader>
-                    <div className="text-3xl font-bold text-forest-600 mb-2">{stat.metric}</div>
+                    <div className="text-3xl font-bold text-primary-green mb-2">{stat.metric}</div>
                     <CardTitle className="text-base">{stat.label}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-charcoal-600">{stat.description}</p>
+                    <p className="text-sm text-charcoal">{stat.description}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
 
             <div className="space-y-4">
-              <h3 className="headline-md text-charcoal-800">Beyond Dollar Value</h3>
+              <h3 className="headline-md text-charcoal">Beyond Dollar Value</h3>
               <ul className="space-y-3">
                 {[
                   "Peace of mind from comprehensive warranties",
@@ -288,8 +288,8 @@ export default function InvestmentGuidePage() {
                   "Environmental benefits through recyclable materials",
                 ].map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-forest-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-charcoal-700">{benefit}</span>
+                    <CheckCircle className="h-5 w-5 text-primary-green flex-shrink-0 mt-0.5" />
+                    <span className="text-charcoal">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -299,14 +299,14 @@ export default function InvestmentGuidePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-forest-600 text-ivory-100">
+      <section className="py-20 bg-primary-green text-ivory">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="display-md mb-6">Get Your Custom Quote</h2>
-          <p className="headline-md mb-8 max-w-2xl mx-auto font-normal">
+          <h2 className="text-headline-md mb-6">Get Your Custom Quote</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto font-normal">
             Every home is unique. Schedule a complimentary assessment for an exact, transparent proposal
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-ivory-100 text-forest-700 hover:bg-ivory-200" asChild>
+            <Button size="lg" className="bg-ivory text-primary-green hover:bg-ivory" asChild>
               <Link href="/contact">Schedule Free Assessment</Link>
             </Button>
             <Button variant="secondary" size="lg" asChild>
