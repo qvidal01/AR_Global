@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond, Libre_Baskerville } from "next/font/google";
+import Script from "next/script";
+import { organizationSchema, localBusinessSchema } from "@/src/lib/schema";
+import { Analytics } from "@/src/components/Analytics";
 import "./globals.css";
 
 const inter = Inter({
@@ -34,7 +37,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${cormorantGaramond.variable} ${libreBaskerville.variable}`}>
+      <head>
+        {/* Schema.org Structured Data */}
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <Script
+          id="local-business-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+      </head>
       <body className="antialiased">
+        <Analytics />
         {children}
       </body>
     </html>

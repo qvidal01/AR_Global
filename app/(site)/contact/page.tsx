@@ -10,6 +10,8 @@ import { Textarea } from "@/src/components/ui/textarea"
 import { Label } from "@/src/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card"
 import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react"
+import { trackFormSubmission, trackPhoneClick } from "@/src/lib/analytics"
+import { useScrollDepth } from "@/src/hooks/useAnalytics"
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -31,6 +33,9 @@ export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+  // Track scroll depth for engagement
+  useScrollDepth()
+
   const {
     register,
     handleSubmit,
@@ -43,20 +48,27 @@ export default function ContactPage() {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true)
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1500))
 
-    console.log("Form data:", data)
-    setIsSubmitted(true)
-    setIsSubmitting(false)
-    reset()
+      console.log("Form data:", data)
+      setIsSubmitted(true)
+      trackFormSubmission("contact_form", true)
+      reset()
 
-    // In production, you would send this to your API
-    // const response = await fetch("/api/contact", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(data),
-    // })
+      // In production, you would send this to your API
+      // const response = await fetch("/api/contact", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(data),
+      // })
+    } catch (error) {
+      trackFormSubmission("contact_form", false)
+      console.error("Form submission error:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -79,7 +91,11 @@ export default function ContactPage() {
             </p>
             <p className="text-sm text-charcoal-600">
               Need immediate assistance? Call us at{" "}
-              <a href="tel:+12145551234" className="text-forest-600 hover:text-forest-700 font-semibold">
+              <a
+                href="tel:+12145551234"
+                className="text-forest-600 hover:text-forest-700 font-semibold"
+                onClick={() => trackPhoneClick("contact_thank_you")}
+              >
                 (214) 555-1234
               </a>
             </p>

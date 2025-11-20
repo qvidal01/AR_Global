@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/src/components/ui/button"
 import { cn } from "@/src/lib/utils"
+import { trackPhoneClick, trackCTAClick } from "@/src/lib/analytics"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
@@ -47,12 +48,18 @@ export function Header() {
           <a
             href="tel:+12145551234"
             className="flex items-center space-x-2 text-sm font-medium text-charcoal-700 hover:text-forest-500 transition-colors"
+            onClick={() => trackPhoneClick("header_desktop")}
           >
             <Phone className="h-4 w-4" />
             <span>(214) 555-1234</span>
           </a>
           <Button variant="primary" asChild>
-            <Link href="/contact">Schedule Consultation</Link>
+            <Link
+              href="/contact"
+              onClick={() => trackCTAClick("Schedule Consultation", "header_desktop")}
+            >
+              Schedule Consultation
+            </Link>
           </Button>
         </div>
 
