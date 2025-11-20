@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-charcoal to-charcoal text-ivory-100">
+      <section className="relative h-screen flex items-center justify-center bg-charcoal text-ivory-100">
         {/* Background Image */}
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -15,8 +15,8 @@ export default function HomePage() {
             backgroundImage: "url('https://images.unsplash.com/photo-1632750668625-33b092bede47?q=80&w=2400&auto=format&fit=crop')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/60 z-0"></div>
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 z-10 text-center">
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 z-20 text-center relative">
           <h1 className="text-headline-lg mb-6 text-ivory px-4">
             The Last Roof Your Home Will Ever Need
           </h1>
